@@ -6,7 +6,7 @@ import javax.swing.table.AbstractTableModel;
 
 import model.User;
 
-public abstract class TableUser extends AbstractTableModel {
+public class TableUser extends AbstractTableModel {
 	  List<User> ls;
 	  private String[] columnNames = {"ID", "Name", "Username", "Password"};
 	  public TableUser(List<User> ls) {

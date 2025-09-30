@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 import config.Database;
 import model.User;
 
-public abstract class UserRepo implements UserDAO {
+public class UserRepo implements UserDAO {
 	private Connection connection;
 	final String insert = "INSERT INTO user (name, username, password) VALUES (?, ?, ?)";
 	final String select = "SELECT * FROM user";
