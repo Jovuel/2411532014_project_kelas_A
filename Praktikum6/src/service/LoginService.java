@@ -1,16 +1,16 @@
 package service;
 
 import java.sql.*;
-import config.Database;
+import config.DbConnection;
 import model.User;
 
 public class LoginService {
 	public boolean authenticate(User user) {
-		String query = "SELECT * FROM user WHERE username = ? AND password = ?";
+		String query = "SELECT * FROM user WHERE email = ? AND password = ?";
 		
-		try(Connection conn = Database.koneksi();
-				PreparedStatement statement = conn.prepareStatement(query)){
-			statement.setString(1, user.getUsername());
+		try(Connection connection = DbConnection.koneksi();
+				PreparedStatement statement = connection.prepareStatement(query)){
+			statement.setString(1, user.getEmail());
 			statement.setString(2, user.getPassword());
 			
 			ResultSet resultSet = statement.executeQuery();

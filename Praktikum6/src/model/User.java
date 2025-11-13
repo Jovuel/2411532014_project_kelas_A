@@ -1,37 +1,22 @@
 package model;
 
 public class User {
-	String id, nama, username, password;
+	String email;
+	String password;
 	
-	public User(String uname, String pass) {
-		this.username = uname;
+	public User(String email, String pass) {
+		this.email = email;
 		this.password = pass;
 	}
 	
-	public String getId() {
-		return id;
+	public String getEmail() {
+		return email;
 	}
 	
-	public void setId(String id) {
-		this.id = id;
+	public void setEmail(String email) {
+		this.email = email;
 	}
-	
-	public String getNama() {
-		return nama;
-	}
-	 
-	public void setNama(String nama) {
-		this.nama = nama;
-	}
-	
-	public String getUsername() {
-		return username;
-	}
-	
-	public void setUsername(String username) {
-		this.username = username;
-	}
-	
+
 	public String getPassword() {
 		return password;
 	}

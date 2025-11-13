@@ -5,10 +5,10 @@ import model.User;
 
 public class ValidationUtil {
 	public static void validate(User user) throws ValidationException, NullPointerException {
-		if(user.getUsername() == null) {
+		if(user.getEmail() == null) {
 			throw new NullPointerException("Username is Null");
 		}
-		else if(user.getUsername().isBlank()) {
+		else if(user.getEmail().isBlank()) {
 			throw new ValidationException("Username is Blank");
 		}
 		else if(user.getPassword() == null) {
