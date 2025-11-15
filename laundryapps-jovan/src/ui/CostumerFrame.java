@@ -108,7 +108,7 @@ public class CostumerFrame extends JFrame {
                 .setNama(txtName.getText())
                 .setAlamat(txtAddress.getText())
                 .setHp(txtPhone.getText())
-                .setEmail(txtEmail.getText())
+        //        .setEmail(txtEmail.getText())
                 .build();
                 
                 custRepo.save(customer);
@@ -133,12 +133,14 @@ public class CostumerFrame extends JFrame {
                     return;
                 }
                 try {
-                    Costumer c = new Costumer();
-                    c.setId(id);
-                    c.setNama(txtName.getText().trim());
-                    c.setAlamat(txtAddress.getText().trim());
-                    c.setNomor_hp(txtPhone.getText().trim());
-                    custRepo.update(c);
+                	Costumer customer = new CustomerBuilder()
+                            .setNama(txtName.getText())
+                            .setAlamat(txtAddress.getText())
+                            .setHp(txtPhone.getText())
+                            //.setEmail(txtEmail.getText())
+                            .build();
+                	
+                    custRepo.update(customer);
                     reset();
                     loadTable();
                 } catch (Exception ex) {
