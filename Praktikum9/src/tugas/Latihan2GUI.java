@@ -1,4 +1,3 @@
-// Java
 package tugas;
 
 import java.awt.EventQueue;
@@ -24,9 +23,6 @@ public class Latihan2GUI extends JFrame {
 	private JProgressBar progressBar2;
 	private JProgressBar progressBar3;
 
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -40,9 +36,6 @@ public class Latihan2GUI extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
 	public Latihan2GUI() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -77,7 +70,6 @@ public class Latihan2GUI extends JFrame {
 		btnNewButton.setBounds(275, 170, 121, 20);
 		contentPane.add(btnNewButton);
 
-		// Progress bars next to file labels
 		progressBar1 = new JProgressBar(0, 100);
 		progressBar1.setBounds(90, 62, 300, 24);
 		progressBar1.setValue(0);
@@ -93,7 +85,6 @@ public class Latihan2GUI extends JFrame {
 		progressBar3.setValue(0);
 		contentPane.add(progressBar3);
 
-		// Action: start three threads using lambda expressions
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnNewButton.setEnabled(false);
@@ -154,7 +145,6 @@ public class Latihan2GUI extends JFrame {
 					}
 				}, "File-3");
 
-				// start all threads
 				t1.start();
 				t2.start();
 				t3.start();
